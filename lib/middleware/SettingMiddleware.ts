@@ -40,8 +40,9 @@ export function putShopAppSettings(settingStorage: SettingStorage): Handler {
     if (shop === undefined || app === undefined) {
       throw ResourceNotFoundError;
     }
+
     await settingStorage.setSettings(shop, app, toHashMap(request.body));
-    reply(response).status(200).json({});
+    reply(response).status(200).json(request.body);
     next();
   };
 }
