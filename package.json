@@ -1,6 +1,6 @@
 {
   "name": "@icancode/shopify-express",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Shopify express middlewares",
   "main": "main",
   "scripts": {
@@ -39,6 +39,7 @@
   "dependencies": {
     "@icancode/express": "^1.0.15",
     "@icancode/shopify-setting-storage": "^1.0.2",
+    "@icancode/shopify-subscription-storage": "^1.0.0",
     "@shopify/shopify-api": "^7.4.0",
     "express": "^4.18.2"
   }

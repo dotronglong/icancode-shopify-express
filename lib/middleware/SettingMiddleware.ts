@@ -1,12 +1,9 @@
 import {Request, Response, NextFunction, Handler} from 'express';
 import {reply} from '@icancode/express';
 import {Session} from '@shopify/shopify-api';
-import {toHashMap, HttpError, toView} from '@icancode/base';
+import {toHashMap, toView} from '@icancode/base';
 import {SettingStorage} from '@icancode/shopify-setting-storage';
-
-/* eslint-disable max-len */
-const ResourceNotFoundError = new HttpError(404, 'resource.notfound', 'Resource could not be found');
-/* eslint-enable max-len */
+import {ResourceNotFoundError} from '../error';
 
 /**
  * Returns a middle to get app's settings for shop
