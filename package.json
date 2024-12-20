@@ -39,7 +39,7 @@
   "dependencies": {
     "@icancode/express": "^1.0.15",
     "@icancode/shopify-setting-storage": "^1.0.2",
-    "@icancode/shopify-subscription-storage": "^1.0.0",
+    "@icancode/shopify-subscription-storage": "^1.0.1",
     "@shopify/shopify-api": "^9.1.0",
     "express": "^4.21.2"
   }
