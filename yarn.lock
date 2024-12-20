@@ -867,10 +867,10 @@
     "@aws-sdk/lib-dynamodb" "^3.357.0"
     "@icancode/base" "^1.0.2"
 
-"@icancode/shopify-subscription-storage@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@icancode/shopify-subscription-storage/-/shopify-subscription-storage-1.0.0.tgz#58b53770a02255c3b34d33b24e2541431673d86d"
-  integrity sha512-0+HdJTeoh2l+uoOpkFyxEW7QMqneTqFGnuy4dmPmL14pgmGlpoHb08zkzUYTqvGWaipz3uvFKIsS/oFeVFKt7Q==
+"@icancode/shopify-subscription-storage@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@icancode/shopify-subscription-storage/-/shopify-subscription-storage-1.0.1.tgz#711495083cbd0e4392e7057f665dd630c5c37c22"
+  integrity sha512-GDxufeTYDDqYqrxfOukUN6KLljDtY+0Kd5M2uvLdBePKjvL85P8WZ9yH7aI5fCcp3KhTTBq8M+7kiRpSbVTn4g==
   dependencies:
     "@icancode/base" "^1.0.2"
     "@icancode/shopify-setting-storage" "^1.0.2"
