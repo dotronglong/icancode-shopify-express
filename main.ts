@@ -1,13 +1,2 @@
-import {
-  getShopAppSettings,
-  putShopAppSettings
-} from './lib/middleware/SettingMiddleware'
-import {
-  getShopAppSubscription
-} from './lib/middleware/SubscriptionMiddleware'
-
-export {
-  getShopAppSettings,
-  putShopAppSettings,
-  getShopAppSubscription
-};
+export * from './lib/middleware/SettingMiddleware';
+export * from './lib/middleware/SubscriptionMiddleware';

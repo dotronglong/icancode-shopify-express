@@ -1,9 +1,8 @@
 import {Request, Response, NextFunction, Handler} from 'express';
 import {reply} from '@icancode/express';
 import {Session} from '@shopify/shopify-api';
-import {toHashMap, toView} from '@icancode/base';
+import {ResourceNotFoundError, toHashMap, toView} from '@icancode/base';
 import {SettingStorage} from '@icancode/shopify-setting-storage';
-import {ResourceNotFoundError} from '../error';
 
 /**
  * Returns a middle to get app's settings for shop
@@ -19,7 +18,9 @@ export function getShopAppSettings(settingStorage: SettingStorage): Handler {
       throw ResourceNotFoundError;
     }
     const settings = await settingStorage.getSettings(shop, app);
-    reply(response).json(toView(settings.all(), undefined, ['shop', 'app']));
+    reply(response).json(toView(settings.all(), {
+      exclude: ['shop', 'app'],
+    }));
     next();
   };
 };

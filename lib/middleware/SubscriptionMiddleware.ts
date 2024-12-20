@@ -1,9 +1,8 @@
 import {Response, NextFunction, Handler} from 'express';
 import {reply} from '@icancode/express';
 import {Session} from '@shopify/shopify-api';
-import {toView} from '@icancode/base';
+import {ResourceNotFoundError, toView} from '@icancode/base';
 import {SubscriptionStorage} from '@icancode/shopify-subscription-storage';
-import {ResourceNotFoundError} from '../error';
 
 /**
  * Returns a middle to get app's settings for shop
@@ -19,11 +18,9 @@ export function getShopAppSubscription(subscriptionStorage: SubscriptionStorage)
       throw ResourceNotFoundError;
     }
     const subscription = await subscriptionStorage.getSubscription(shop, app);
-    reply(response).json(toView(
-        subscription.all(),
-        undefined,
-        ['shop', 'app'],
-    ));
+    reply(response).json(toView(subscription.all(), {
+      exclude: ['shop', 'app'],
+    }));
     next();
   };
 };
