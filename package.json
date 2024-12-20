@@ -1,6 +1,6 @@
 {
   "name": "@icancode/shopify-express",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Shopify express middlewares",
   "main": "main",
   "scripts": {
@@ -31,16 +31,21 @@
     "@types/node": "^18.15.11",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
     "@typescript-eslint/parser": "^5.58.0",
+    "debug": "^4.4.0",
     "eslint": "^8.38.0",
     "eslint-config-google": "^0.14.0",
+    "glob": "^11.0.0",
     "mocha": "^10.2.0",
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "@icancode/express": "^1.0.15",
+    "@icancode/express": "^1.1.0",
     "@icancode/shopify-setting-storage": "^1.0.2",
     "@icancode/shopify-subscription-storage": "^1.0.0",
     "@shopify/shopify-api": "^9.1.0",
     "express": "^4.21.2"
+  },
+  "resolutions": {
+    "glob": "^9.0.0"
   }
 }
